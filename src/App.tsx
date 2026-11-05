@@ -18,7 +18,7 @@ function Test() {
     types: [] as string[],
     height: NaN,
     weight: NaN,
-    image: "/questionMark.webp"
+    image: ${import.meta.env.BASE_URL}questionMark.webp
   });
 
   async function fetchValidPokemon(maxAttempts = 20) {
