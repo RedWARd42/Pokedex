@@ -3,7 +3,7 @@ import './App.css'
 
 function Test() {
   
-  const plink = new Audio(${import.meta.env.BASE_URL}pokePlink.mp3)
+  const plink = new Audio(`${import.meta.env.BASE_URL}pokePlink.mp3`)
   const [bannedList, setBannedList] = useState<string[]>([]);
   const [history, setHistory] = useState<{ name: string, image: string }[]>([]);
 
@@ -18,7 +18,7 @@ function Test() {
     types: [] as string[],
     height: NaN,
     weight: NaN,
-    image: ${import.meta.env.BASE_URL}questionMark.webp
+    image: `${import.meta.env.BASE_URL}questionMark.webp`,
   });
 
   async function fetchValidPokemon(maxAttempts = 20) {
