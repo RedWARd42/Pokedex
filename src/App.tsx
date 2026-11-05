@@ -45,7 +45,7 @@ function Test() {
           bannedList.includes(String(candidate.id)) ||
           bannedList.includes(`${candidate.height / 10} m`) ||
           bannedList.includes(`${candidate.weight / 10} kg`) ||
-          candidate.types.some(t => bannedList.includes(t));
+          candidate.types.some((t: string) => bannedList.includes(t));
 
         if (!isBanned) {
           setPokemonStats(candidate);
